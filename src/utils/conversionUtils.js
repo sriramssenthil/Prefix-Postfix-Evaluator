@@ -1,3 +1,4 @@
+// Infix to Postfix
 export function infixToPostfix(sequence) {
     let conv = [];
     let postfix = "";
@@ -35,6 +36,7 @@ export function infixToPostfix(sequence) {
     return postfix;
 }
 
+//Infix to Prefix
 export function infixToPrefix(sequence){
     let reversed = reverseExpression(sequence);
     let prefix = "";
@@ -74,6 +76,7 @@ export function infixToPrefix(sequence){
     return reverseExpression(prefix);
 }
 
+//Prefix to Infix
 export function prefixToInfix(prefix) {
     let conv = [];
     prefix = prefix.replace(/\s+/g, "");
@@ -92,6 +95,7 @@ export function prefixToInfix(prefix) {
     return reverseExpression(conv.pop());
 }
 
+// Postfix to Infix
 export function postfixToInfix(postfix) {
     let conv = [];
     postfix = postfix.replace(/\s+/g, "");
@@ -111,10 +115,12 @@ export function postfixToInfix(postfix) {
     return infix;
 }
 
+// Check if character is letter or digit
 function isOperand(char) {
     return /[a-zA-Z0-9]/.test(char);
 }
 
+// Priority of operators
 function operatorPriority(operator) {
     switch (operator) {
         case '^':

@@ -85,7 +85,7 @@ function ConversionPage({ onBack }) {
             {conversionType && (
             <div className="input-container">
                 <label>
-                    Enter your expression (Operation Characters:[+*-/^]):
+                    <h3>Enter your expression (Operation Characters:[+*-/^]):</h3>
                 </label>
                     <input 
                         type="text" 
